@@ -1,0 +1,128 @@
+.cases {
+  padding: var(--section-padding);
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.cases__title {
+  text-align: center;
+  color: var(--color-white);
+  margin-bottom: 48px;
+}
+
+.cases__featured {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.cases__brand {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.9);
+  padding-top: 8px;
+}
+
+.cases__badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+.cases__badge--testimonial {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.cases__text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 20px;
+}
+
+.cases__link {
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.cases__link:hover {
+  text-decoration: underline;
+}
+
+.cases__testimonial {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cases__quote {
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+}
+
+.cases__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.cases__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.cases__author strong {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.cases__author span {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.cases__play {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-white);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 8px 0;
+}
+
+.cases__play-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+@media (max-width: 900px) {
+  .cases__featured {
+    grid-template-columns: 1fr;
+  }
+}

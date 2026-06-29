@@ -1,0 +1,64 @@
+.risk {
+  padding: var(--section-padding);
+  background: var(--color-gray-50);
+}
+
+.risk__inner {
+  text-align: center;
+}
+
+.risk__header {
+  margin-bottom: 48px;
+}
+
+.risk__header .section-subtitle {
+  margin: 16px auto 0;
+}
+
+.risk__title .highlight {
+  color: var(--color-primary);
+}
+
+.risk__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.risk__card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 32px 24px;
+  box-shadow: var(--shadow-card);
+  text-align: left;
+}
+
+.risk__icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.risk__card p {
+  font-size: 0.95rem;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+.risk__warning {
+  font-size: 1.1rem;
+  color: var(--color-gray-600);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.risk__warning strong {
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .risk__cards {
+    grid-template-columns: 1fr;
+  }
+}
