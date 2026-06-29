@@ -1,14 +1,15 @@
 .clients {
-  padding: 48px 0;
+  padding: 56px 0 64px;
   background: var(--color-white);
   border-bottom: 1px solid var(--color-gray-100);
 }
 
 .clients__label {
   text-align: center;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  font-weight: 500;
   color: var(--color-gray-600);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .clients__rating {
@@ -16,12 +17,12 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-bottom: 36px;
+  margin-bottom: 44px;
   flex-wrap: wrap;
 }
 
 .clients__clutch {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 800;
   color: #e62459;
   letter-spacing: 0.02em;
@@ -29,18 +30,18 @@
 
 .clients__stars {
   color: #e62459;
-  font-size: 0.9rem;
+  font-size: 1rem;
   letter-spacing: 1px;
 }
 
 .clients__score {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--color-gray-800);
 }
 
 .clients__reviews {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--color-gray-400);
 }
 
@@ -49,41 +50,61 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 40px 56px;
+  gap: 20px 28px;
 }
 
 .clients__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  opacity: 0.65;
-  filter: grayscale(100%);
-  transition: opacity var(--transition), filter var(--transition);
+  gap: 10px;
 }
 
-.clients__item:hover {
-  opacity: 1;
-  filter: grayscale(0%);
+.clients__logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  height: 72px;
+  padding: 12px 24px;
+  background: var(--color-gray-50);
+  border: 1px solid var(--color-gray-100);
+  border-radius: var(--radius-md);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.clients__item:hover .clients__logo-wrap {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--color-gray-200);
+  background: var(--color-white);
 }
 
 .clients__logo {
-  height: 32px;
-  display: flex;
-  align-items: center;
-}
-
-.clients__logo svg {
-  height: 32px;
   width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  display: block;
 }
 
 .clients__link {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   color: var(--color-primary);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .clients__link:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .clients__grid {
+    gap: 16px;
+  }
+
+  .clients__logo-wrap {
+    min-width: 120px;
+    height: 64px;
+    padding: 10px 16px;
+  }
 }
