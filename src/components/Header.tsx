@@ -1,6 +1,9 @@
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Logo from './Logo';
 import './Header.css';
+
+const CONTACT_EMAIL = 'jayceni@stoneii.com';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -14,14 +17,14 @@ export default function Header() {
   return (
     <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
       <div className="container header__inner">
-        <a href="#" className="header__logo" aria-label="StoneiiDeV Home">
+        <Link to="/" className="header__logo" aria-label="StoneiiDeV Home">
           <Logo />
-        </a>
+        </Link>
         <div className="header__actions">
-          <a href="mailto:niyuchen21@gmail.com" className="header__email">
-            niyuchen21@gmail.com
+          <a href={`mailto:${CONTACT_EMAIL}`} className="header__email">
+            {CONTACT_EMAIL}
           </a>
-          <a href="#contact" className="btn btn-outline header__cta">
+          <a href="/#contact" className="btn btn-outline header__cta">
             Contact Us
           </a>
         </div>

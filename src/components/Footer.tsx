@@ -1,5 +1,8 @@
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
 import './Footer.css';
+
+const CONTACT_EMAIL = 'jayceni@stoneii.com';
 
 const awards = [
   { name: 'Stevie Award 2024', abbr: 'SA' },
@@ -35,11 +38,11 @@ export default function Footer() {
         </div>
 
         <div className="footer__bottom">
-          <a href="#" className="footer__logo" aria-label="StoneiiDeV Home">
+          <Link to="/" className="footer__logo" aria-label="StoneiiDeV Home">
             <Logo width={140} height={28} fontSize={13} />
-          </a>
+          </Link>
           <div className="footer__links">
-            <a href="mailto:niyuchen21@gmail.com">niyuchen21@gmail.com</a>
+            <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
             <span className="footer__sep">|</span>
             <a href="#">Privacy Policy</a>
             <span className="footer__sep">|</span>
