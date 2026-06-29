@@ -7,21 +7,118 @@
 .cases__title {
   text-align: center;
   color: var(--color-white);
-  margin-bottom: 48px;
+  margin-bottom: 56px;
 }
 
 .cases__featured {
   display: grid;
-  grid-template-columns: 1fr 1.2fr 1fr;
+  grid-template-columns: 1fr 1.1fr 1fr;
   gap: 32px;
   align-items: start;
 }
 
+.cases__visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.cases__phone-mockup {
+  width: 200px;
+  background: #1a2332;
+  border-radius: 28px;
+  padding: 12px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.cases__phone-notch {
+  width: 60px;
+  height: 6px;
+  background: #2d3748;
+  border-radius: 3px;
+  margin: 0 auto 10px;
+}
+
+.cases__phone-screen {
+  background: #fff;
+  border-radius: 18px;
+  padding: 16px 14px;
+  min-height: 280px;
+}
+
+.cases__app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cases__app-logo {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1a2332;
+}
+
+.cases__app-badge {
+  font-size: 0.6rem;
+  background: #eef1f6;
+  padding: 3px 8px;
+  border-radius: 100px;
+  color: #5a6474;
+  font-weight: 600;
+}
+
+.cases__app-balance span {
+  display: block;
+  font-size: 0.65rem;
+  color: #8b95a5;
+  margin-bottom: 4px;
+}
+
+.cases__app-balance strong {
+  font-size: 1.4rem;
+  color: #1a2332;
+}
+
+.cases__app-actions {
+  display: flex;
+  gap: 6px;
+  margin: 16px 0;
+}
+
+.cases__app-actions button {
+  flex: 1;
+  padding: 8px 4px;
+  font-size: 0.6rem;
+  font-weight: 600;
+  background: #0066d4;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.cases__app-actions button:nth-child(2) {
+  background: #eef1f6;
+  color: #1a2332;
+}
+
+.cases__app-txns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cases__app-txn {
+  height: 36px;
+  background: #f5f7fa;
+  border-radius: 8px;
+}
+
 .cases__brand {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: rgba(255, 255, 255, 0.9);
-  padding-top: 8px;
 }
 
 .cases__badge {
@@ -78,15 +175,11 @@
 }
 
 .cases__avatar {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: var(--color-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  font-weight: 700;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .cases__author strong {

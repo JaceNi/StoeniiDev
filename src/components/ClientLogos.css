@@ -16,13 +16,21 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.clients__clutch {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #e62459;
+  letter-spacing: 0.02em;
 }
 
 .clients__stars {
-  color: var(--color-accent);
-  font-size: 1rem;
-  letter-spacing: 2px;
+  color: #e62459;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
 }
 
 .clients__score {
@@ -31,37 +39,47 @@
   color: var(--color-gray-800);
 }
 
+.clients__reviews {
+  font-size: 0.8rem;
+  color: var(--color-gray-400);
+}
+
 .clients__grid {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 32px 48px;
+  gap: 40px 56px;
 }
 
 .clients__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  opacity: 0.65;
+  filter: grayscale(100%);
+  transition: opacity var(--transition), filter var(--transition);
 }
 
-.clients__name {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--color-gray-400);
-  letter-spacing: 0.02em;
-  opacity: 0.85;
-  transition: opacity var(--transition);
-}
-
-.clients__item:hover .clients__name {
+.clients__item:hover {
   opacity: 1;
-  color: var(--color-gray-600);
+  filter: grayscale(0%);
+}
+
+.clients__logo {
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.clients__logo svg {
+  height: 32px;
+  width: auto;
 }
 
 .clients__link {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--color-primary);
   font-weight: 500;
 }

@@ -32,12 +32,31 @@
   padding: 32px 24px;
   box-shadow: var(--shadow-card);
   text-align: left;
+  height: 100%;
+  border: 1px solid transparent;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.risk__card:hover {
+  border-color: var(--color-gray-200);
+  box-shadow: var(--shadow-lg);
+}
+
+.risk__icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(0, 102, 212, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--color-primary);
 }
 
 .risk__icon {
-  font-size: 2rem;
-  display: block;
-  margin-bottom: 16px;
+  width: 24px;
+  height: 24px;
 }
 
 .risk__card p {

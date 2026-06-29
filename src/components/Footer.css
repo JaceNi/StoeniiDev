@@ -9,21 +9,50 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 32px;
-  padding-bottom: 40px;
+  padding-bottom: 32px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .footer__award {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.85rem;
+  gap: 10px;
+  font-size: 0.82rem;
   font-weight: 500;
 }
 
-.footer__award-icon {
-  font-size: 1.25rem;
+.footer__award-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  letter-spacing: -0.02em;
+}
+
+.footer__offices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 32px;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__office {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .footer__bottom {
@@ -43,6 +72,8 @@
   align-items: center;
   gap: 12px;
   font-size: 0.85rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer__links a:hover {

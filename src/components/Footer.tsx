@@ -1,11 +1,14 @@
+import Logo from './Logo';
 import './Footer.css';
 
 const awards = [
-  'Stevie Award 2024',
-  'IAOP 2024 Global Outsourcing 100',
-  'Globee Awards',
-  '2024 Inc. 5000 List',
+  { name: 'Stevie Award 2024', abbr: 'SA' },
+  { name: 'IAOP Global Outsourcing 100', abbr: 'IAOP' },
+  { name: 'Globee Awards', abbr: 'GB' },
+  { name: 'Inc. 5000 List', abbr: '5000' },
 ];
+
+const offices = ['San Francisco', 'New York', 'São Paulo', 'Buenos Aires'];
 
 export default function Footer() {
   return (
@@ -13,30 +16,36 @@ export default function Footer() {
       <div className="container">
         <div className="footer__awards">
           {awards.map((award) => (
-            <div key={award} className="footer__award">
-              <span className="footer__award-icon" aria-hidden="true">🏆</span>
-              <span>{award}</span>
+            <div key={award.name} className="footer__award">
+              <div className="footer__award-badge">{award.abbr}</div>
+              <span>{award.name}</span>
             </div>
+          ))}
+        </div>
+
+        <div className="footer__offices">
+          {offices.map((city) => (
+            <span key={city} className="footer__office">
+              <svg viewBox="0 0 16 16" fill="currentColor" width="12" height="12" aria-hidden="true">
+                <path d="M8 0a5 5 0 0 0-5 5c0 3.5 5 11 5 11s5-7.5 5-11a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+              </svg>
+              {city}
+            </span>
           ))}
         </div>
 
         <div className="footer__bottom">
           <a href="#" className="footer__logo" aria-label="StoneiiDeV Home">
-            <svg width="140" height="28" viewBox="0 0 160 32" fill="none" aria-hidden="true">
-              <rect x="0" y="6" width="8" height="20" rx="2" fill="currentColor" />
-              <rect x="12" y="2" width="8" height="28" rx="2" fill="currentColor" />
-              <rect x="24" y="6" width="8" height="20" rx="2" fill="currentColor" />
-              <text x="40" y="22" fill="currentColor" fontSize="13" fontWeight="700" fontFamily="Inter, sans-serif">
-                StoneiiDeV
-              </text>
-            </svg>
+            <Logo width={140} height={28} fontSize={13} />
           </a>
           <div className="footer__links">
+            <a href="mailto:niyuchen21@gmail.com">niyuchen21@gmail.com</a>
+            <span className="footer__sep">|</span>
             <a href="#">Privacy Policy</a>
             <span className="footer__sep">|</span>
             <a href="#">Terms of Service</a>
           </div>
-          <p className="footer__copy">StoneiiDeV 2009 – 2026. All rights reserved</p>
+          <p className="footer__copy">StoneiiDeV 2018 – 2026. All rights reserved</p>
         </div>
       </div>
     </footer>

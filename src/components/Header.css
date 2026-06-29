@@ -1,10 +1,19 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
   padding: 20px 0;
+  transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+.header--scrolled {
+  background: rgba(11, 26, 51, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  padding: 12px 0;
 }
 
 .header__inner {
@@ -38,4 +47,10 @@
 .header__cta {
   padding: 10px 22px;
   font-size: 0.875rem;
+}
+
+@media (max-width: 600px) {
+  .header__email {
+    font-size: 0.72rem;
+  }
 }

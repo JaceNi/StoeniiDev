@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  padding: 120px 0 80px;
+  padding: 140px 0 80px;
   overflow: hidden;
   color: var(--color-white);
 }
@@ -8,8 +8,18 @@
 .hero__bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 50%, #1a3a6e 100%);
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 45%, #1a3a6e 100%);
   z-index: 0;
+}
+
+.hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black, transparent);
 }
 
 .hero__bg::after {
@@ -118,6 +128,54 @@
 .hero__submit {
   width: 100%;
   margin-top: 4px;
+}
+
+.hero__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.hero__privacy {
+  font-size: 0.72rem;
+  color: var(--color-gray-400);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.hero__privacy a {
+  color: var(--color-primary);
+}
+
+.hero__success {
+  text-align: center;
+  padding: 24px 8px;
+}
+
+.hero__success-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #059669;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.hero__success h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.hero__success p {
+  color: var(--color-gray-600);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  line-height: 1.6;
 }
 
 @media (max-width: 900px) {

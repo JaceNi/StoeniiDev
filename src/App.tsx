@@ -11,6 +11,7 @@ import AdaptSection from './components/AdaptSection';
 import Testimonials from './components/Testimonials';
 import ProcessSection from './components/ProcessSection';
 import Footer from './components/Footer';
+import CookieBanner from './components/CookieBanner';
 import './App.css';
 
 export default function App() {
@@ -31,6 +32,7 @@ export default function App() {
         <ProcessSection />
       </main>
       <Footer />
+      <CookieBanner />
     </div>
   );
 }

@@ -1,5 +1,10 @@
 import { useState } from 'react';
+import ScrollReveal from './ScrollReveal';
 import './Testimonials.css';
+
+function avatarUrl(name: string) {
+  return `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&size=96&background=0b1a33&color=fff&bold=true`;
+}
 
 const testimonials = [
   {
@@ -63,21 +68,32 @@ export default function Testimonials() {
   return (
     <section className="testimonials">
       <div className="container">
-        <h2 className="section-title testimonials__title">
-          Real testimonials from delighted clients.
-        </h2>
+        <ScrollReveal>
+          <h2 className="section-title testimonials__title">
+            Real testimonials from delighted clients.
+          </h2>
+        </ScrollReveal>
 
         <div className="testimonials__carousel">
           <button type="button" className="testimonials__nav" onClick={prev} aria-label="Previous">
             ‹
           </button>
 
-          <div className="testimonials__card">
+          <div className="testimonials__card" key={current}>
             <span className="testimonials__company">{t.company}</span>
             <blockquote className="testimonials__quote">&ldquo;{t.quote}&rdquo;</blockquote>
             <div className="testimonials__author">
-              <strong>{t.name}</strong>
-              <span>{t.role}</span>
+              <img
+                src={avatarUrl(t.name)}
+                alt={t.name}
+                className="testimonials__avatar"
+                width={52}
+                height={52}
+              />
+              <div>
+                <strong>{t.name}</strong>
+                <span>{t.role}</span>
+              </div>
             </div>
           </div>
 
