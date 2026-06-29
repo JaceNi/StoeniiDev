@@ -57,7 +57,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
 }
 
 .clients__logo-wrap {
@@ -85,16 +84,6 @@
   max-width: 140px;
   object-fit: contain;
   display: block;
-}
-
-.clients__link {
-  font-size: 0.75rem;
-  color: var(--color-primary);
-  font-weight: 600;
-}
-
-.clients__link:hover {
-  text-decoration: underline;
 }
 
 @media (max-width: 600px) {

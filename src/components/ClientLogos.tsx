@@ -1,10 +1,10 @@
 import './ClientLogos.css';
 
 const clients = [
-  { name: 'Google', logo: '/logos/google.svg', action: 'Read case study', height: 36 },
-  { name: 'NextRoll', logo: '/logos/nextroll.svg', action: 'Watch testimonial', height: 32 },
-  { name: 'Pinterest', logo: '/logos/pinterest.svg', action: 'Read case study', height: 32 },
-  { name: 'A-lign', logo: '/logos/align.svg', action: 'Watch testimonial', height: 32 },
+  { name: 'Google', logo: '/logos/google.svg', height: 36 },
+  { name: 'NextRoll', logo: '/logos/nextroll.svg', height: 32 },
+  { name: 'Pinterest', logo: '/logos/pinterest.svg', height: 32 },
+  { name: 'A-lign', logo: '/logos/align.svg', height: 32 },
   { name: 'Azlo', logo: '/logos/azlo.svg', height: 32 },
   { name: 'Abra', logo: '/logos/abra.svg', height: 32 },
   { name: 'Rolls-Royce', logo: '/logos/rolls-royce.svg', height: 28 },
@@ -35,11 +35,6 @@ export default function ClientLogos() {
                   loading="lazy"
                 />
               </div>
-              {client.action && (
-                <a href="#" className="clients__link">
-                  {client.action}
-                </a>
-              )}
             </div>
           ))}
         </div>
